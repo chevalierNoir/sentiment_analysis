@@ -34,7 +34,7 @@ def toXy(data, key_to_ix):
 def textToFeature(text, key_to_ix):
     words = text.split()
     feat = np.zeros((len(key_to_ix)))
-    akey = next (iter (key_to_ix.values()))
+    akey = next (iter (key_to_ix.keys()))
     if isinstance(akey, tuple): # bigram
         for i in range(len(words) - 1):
             if (words[i], words[i + 1]) in key_to_ix:
