@@ -89,7 +89,6 @@ def preprocess(use_bigram = False,mincount=5):
     keys, key_to_ix = getVocab(data, use_bigram,mincount)
     X = {}
     y = {}
-    train_data = train_data + val_data
     X['train'], y['train'] = toXy(train_data, key_to_ix)
     X['val'], y['val'] = toXy(val_data, key_to_ix)
     X['test'], y['test'] = toXy(test_data, key_to_ix)
